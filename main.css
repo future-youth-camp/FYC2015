@@ -8,6 +8,7 @@
 body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 .img-back {
@@ -15,14 +16,17 @@ body {
 	z-index: -100;
 	
 	left: 50%;
-	top: 40%;
+	top: 50%;
+	
+	min-width: 100%;
+	min-height: 100%;
 	
 	transform: translate(-50%, -50%);
 
-	min-width: 100%;
-	min-height: 100%;
 	width: auto;
 	height: auto;
+	
+	overflow: hidden;
 }
 
 .container {	
@@ -30,11 +34,19 @@ body {
 	box-shadow: 0 0 7px rgba(255,255,255,0.4);
 }
 
-.cont-func {
-	width: 100%;
-	max-width: 980px;
-	margin: auto;	
-	padding: 20px;
+@media screen and (min-width: 1000px) {
+	.cont-func {
+		width: 100%;
+		max-width: 980px;
+		margin: auto;	
+		padding: 20px;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.cont-func {
+		margin: 0;
+		max-width: 100vw;
+	}
 }
 
 .heading {
