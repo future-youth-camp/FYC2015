@@ -11,27 +11,22 @@
   </head>
   <body class="background">
     <div class="container">
-      <div class="decks-btn-container">
+      <!-- <div class="decks-btn-container">
         <div class="decks-btn">
         </div>
-        </div>
-
-
-      </div>
-    </div>
-
-      <p class="stjoobid" style="text-align: center;">
-FLIP-CARDS    </p>
-
+        </div> -->
 
         <div class="row">
         <div class="col-md-3">
-          <a href="#" class="btn btn-primary full-width" id="newgame">NEW GAME</a>
+          <img class="imgs img-responsive"src="cards.jpg" alt="" />
+          <a href="#" class="btn btn-primary full-width" id="newgame">New game</a>
         </div>
         <div id="nextcard"class="col-md-3">
           <div class="hidden" id="add-cards">
-            <input type="text" id="question" name="name" value="">
-            <input type="text" id="answer" name="name" value="">
+            <textarea name="name" rows="8" cols="40"  id="question"></textarea>
+            <textarea name="name" rows="8" cols="40" id="answer" ></textarea>
+            <!-- <input type="" id="question" name="name" value="">
+            <input type="text" id="answer" name="name" value=""> -->
 
           </div>
 
@@ -69,13 +64,10 @@ FLIP-CARDS    </p>
         <script type="text/javascript">
           $(".flip-container").click(function () {
             $(this).toggleClass("active");
-
           });
         </script>
 
 
       </div>
-    </div>
-
   </body>
 </html>

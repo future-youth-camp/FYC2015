@@ -14,8 +14,8 @@ body{
   background-color: #4073D5
 }
 .i2{
-  width: 40%
-
+  width: 40%;
+  border-radius: 5px;
 }
 
 .center {
@@ -33,7 +33,7 @@ body{
   margin: 20px
 }
 body {
-  /*background-image: url("http://images7.alphacoders.com/320/320986.jpg");*/
+  /*background-image: url("http://buzzerg.com/wp-content/uploads/8589130494239-black-tiger-wallpaper-hd.jpg");*/
   }
 
 .search-box {
@@ -44,6 +44,7 @@ body {
 .bg {
   position: fixed;
   top: 0;
+  right: 0;
   min-width: 100%;
   min-height: 100%;
 }

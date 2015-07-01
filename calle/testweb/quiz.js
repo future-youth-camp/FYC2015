@@ -1,25 +1,85 @@
 var names = [
   {
     name: "Calle",
-    key: "anus"
+    key: ["Hund", "Hane", "Medium"]
   },
   {
     name: "Missan",
-    key: "bra"
+    key: ["Katt", "Hona", "Obfärg","Liten"]
   },
   {
     name: "Snöboll",
-    key: "204"
+    key: ["Katt", "Hane", "Hona", "Vinte","Vit"]
   },
   {
     name: "Sten",
-    key: "13"
+    key: ["Fisk", "Grå", "Stor", "Hane", "Hona", "Vinte"]
   },
+
   {
     name: "Elisia",
-    key: "sådär"
+    key: ["Fågel", "Grön", "Hane", "Hona", "Vinte"]
   },
+  {
+    name: "Gustaf",
+    key: ["Katt", "Orange", "Stor", "Hane"]
+  },
+  {
+    name: "Frappe",
+    key: ["Hund", "Brun", "Medium", "Hane", "Hona", "Vinte"]
+  },
+  {
+    name: "Zelda",
+    key: ["Katt", "Hona", "Medium", "Vit"]
+  },
+  {
+    name: "Marshmellow",
+    key: ["Fågel", "Katt", "Hund", "Stor", "Vit", "Hane", "Hona", "Vinte"]
+  },
+  {
+    name: "Dani",
+    key: ["Fisk", "Hane", "Stor", "Liten", "Medium", "Vit"]
+  },
+  {
+    name: "Krim",
+    key: ["Katt", "Stor", "Medium", "Vit", "Hane"]
+  },
+  {
+    name: "Bruno",
+    key: ["Brun", "Stor", "Medium", "Hane"]
+  },
+  {
+    name: "Sam",
+    key: ["Fågel", "Katt", "Hund", "Medium", "Obfärg", "Hane", "Hona", "Vinte", "Brun", "Orange", "Vit", "Grå"]
+  },
+  {
+    name: "Iben",
+    key: ["Fågel", "Medium", "Vit","Obfärg", "Orange", "Vit", "Grå" ,"Hane", "Hona", "Vinte"]
+  },
+  {
+    name: "Quinn",
+    key: ["Hona", "Hane", "Obfärg", "Vinte", "Vit", "Grå", "Medium", "Stor", "Liten"]
+  },
+  {
+    name: "Sandy",
+    key: ["Hona", "Hane", "Brun", "Orange", "Hund"]
+  },
+  {
+    name: "Glenn",
+    key: ["Katt", "Grå", "Medium", "Hane", "Stor"]
+  },
+  {
+    name: "",
+    key: ["", "", ""]
+  },
+  {
+    name: "",
+    key: ["", "", ""]
+  },
+
 ]
+
+var count = 0;
 
 var matches = [];
 
@@ -34,13 +94,13 @@ $(document).ready(function(){
   var result_container = $("#result_container")
 
   // Frågorna
-  var q = [$("#q1"), $("#q2"), $("#q3"), $("#q4")]
+  var q = [$("#q1"), $("#q2"), $("#q3"), $("#q4"), $("#q5"), $("#q6"), $("#q7")]
 
   // Svarsalternativen
-  var s = [$("[name='s1']"), $("[name='s2']"), $("[name='s3']"), $("[name='s4']")]
+  var s = [$("[name='s1']"), $("[name='s2']"), $("[name='s3']"), $("[name='s4']"), $("[name='s5']"), $("[name='s6']"), $("[name='s7']")]
 
   // Rätta svaren
-  var answers = ["#s1_4", "#s2_2", "#s3_1", "#s4_3"]
+  var answers = ["#s1_4", "#s2_2", "#s3_1", "#s4_3", "#s5_3", "#s6_3", "#s7_3"]
 
   // Nuvarande fråga
   var current_question = 0
@@ -60,7 +120,7 @@ $(document).ready(function(){
     increase_question_counter()
     // Om sista, visa resultat
     if(last_question()) {
-      return render_result()
+      render_result()
     }
   })
 
@@ -73,26 +133,39 @@ $(document).ready(function(){
   }
 
   function render_result() {
+    console.log("Rendering");
     for (var i = 0; i < names.length; i++) {
-      if (targets[targets.length-1] == names[i].key) {
-        matches.push(names[i].name)
-      }
+      count = 0;
+
+
+        printNames(i);
+      /*  for (var k = 0; k < names[i].key.length; k++) {
+          console.log(names[i].key[k]);
+          if (targets[j].toLowerCase() == names[i].key[k].toLowerCase()) {
+            count++;
+            console.log(names[i].name);
+            if (count > 1){
+              matches.push(names[i].name);
+            }
+          }
+        } */
+      console.log(count);
     }
-    for (var i = 0; i < names.length; i++) {
-      if (targets[targets.length-2] == names[i].key) {
-        matches.push(names[i].name)
-      }
-    }
-      for (var i = 0; i < names.length; i++) {
-        if (targets[targets.length-3] == names[i].key) {
-          matches.push(names[i].name)
-        }
-      }
-        for (var i = 0; i < names.length; i++) {
-          if (targets[targets.length-4] == names[i].key) {
-            matches.push(names[i].name)
+
+    function printNames(i) {
+      for (var j = 0; j < targets.length; j++) {
+        for (var k = 0; k < names[i].key.length; k++) {
+          if (targets[j].toLowerCase() == names[i].key[k].toLowerCase()) {
+            count++;
+            if (count > 1){
+              matches.push(names[i].name);
+              return;
+            }
           }
         }
+      }
+    }
+
     next_question_btn.fadeOut()
     result_container.hide().removeClass("hidden").fadeIn()
     console.log(targets);

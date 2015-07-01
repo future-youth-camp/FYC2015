@@ -94,7 +94,7 @@ body {
    color: #ffffff;
    }
 
-   .bold {
+   .big {
      font-size: 50px;
      font-family: "Luna";
      color: #E3A9C9;
@@ -166,4 +166,50 @@ h4{
 .incorrect {
 	color: #210C04;
 	background: #FFFAF6;
+}
+
+.bold {
+  font-weight: bold;
+  font-family: "Kotta One";
+  font-size: 21px;
+  color: #E3A9C9;
+}
+
+.small {
+  font-weight: lighter;
+  font-family: "Kotta One";
+  font-size: 15px;
+}
+
+#result{
+  font-family: "Kotta One";
+  font-size: 18px;
+  color: #210C04;
+}
+
+#result_container {
+  font-family: "Kotta One";
+  font-size: 18px;
+  color: #210C04;
+}
+
+legend{
+  font-family: "Kotta One";
+  font-size: 30px;
+  color: #E3A9C9;
+}
+
+.radio{
+  font-family: "Kotta One";
+  font-size: 25px;
+  color: #210C04;
+}
+
+#border{
+  border: 1px solid #210C04;
+}
+
+.link {
+  font-family: "Kotta One";
+  color: #E3A9C9;
 }

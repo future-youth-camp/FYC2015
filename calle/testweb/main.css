@@ -6,7 +6,7 @@
 }
 
 .container {
-
+  /*background: white;*/
   text-align: center;
 
 }
@@ -21,4 +21,32 @@
   border-radius: 100%;
   border-color: black;
 
+}
+
+
+@media screen and (max-width: 500px) {
+  .responsive-text{
+
+    font-size: 20pt;
+
+  }
+}
+
+.img {
+  position: absolute;
+  z-index: -100;
+}
+
+.left-img {
+  left :0;
+}
+
+.right-img {
+  right: 0;
+}
+
+@media screen and (max-width: 1010px) {
+  .img {
+    display: none;
+  }
 }

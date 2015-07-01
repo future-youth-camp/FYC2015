@@ -1,152 +1,82 @@
-// array med alla frågor
-var questions =
-[
-	// en fråga
-	{
-		// frågans text 
-		question: "Vilket var det första konsolspelet?",
+$(document).ready(function(){
+  // Nästaknappen
+  var next_question_btn = $("#next_question")
 
-		// array med möjliga svar
-		answers: [
-			"a: 1", "b: Ping Pong", "c: Super Mario"
-		],
+  // Resultaten
+  var current_result = 0
+  var result = $("#result")
+  var result_container = $("#result_container")
 
-		// index till rätt svar
-		correct: 0
-	},
-	{
-		question: "Vilket lag spelar Zlatan i för närvarande?",
-		answers: [
-			"a: AC Milan", "b: PSG", "c: FC Barcelona"
-		],
-		correct: 1
-	},
-	{
-		question: "Vem grundade märket Gant?",
-		answers: [
-			"a: Bernard Gant", "b: Gant Smith", "c: Miranda Gant"
-		],
-		correct: 0
-	},
-  {
-		question: "Hur mycket pengar fick Fast and Furious 7 in första veckan?",
-		answers: [
-			"a: 228 miljoner", "b: 905 miljoner", "c: 368 miljoner"
-		],
-		correct: 2
-	},
-  {
-		question: "När föddes Miley Cyrus?",
-		answers: [
-			"a: 1992", "b: 1989", "c: 1994"
-		],
-		correct: 0
-	},
-  {
-		question: "Hur lång var världshistoriens längsta man? ",
-		answers: [
-			"a: 2,72 m", "b: 2,69 m", "c: 2,82 m"
-		],
-		correct: 0
-	},
-  {
-		question: "Om man kissar rött, vad har man ätit?",
-		answers: [
-			"a: Rödbetor", "b: Rabarber", "c: Rött kött"
-		],
-		correct: 0
-	},
+  // Frågorna
+  var q = [$("#q1"), $("#q2"), $("#q3"), $("#q4"), $("#q5"), $("#q6"), $("#q7"), $("#q8"),  $("#q9"),  $("#q10"), $("#q11"), $("#q12"), $("#q13"), $("#q14"), $("#q15"), $("#q16")]
 
-{
-		question: "Vem vann Melodiestivalen år 2010?",
-		answers: [
-			"a: Loreen", "b: Marlena Ernman", "c: Anna Bergendahl"
-		],
-		correct: 2
-	},
+  // Svarsalternativen
+  var s = [$("[name='s1']"), $("[name='s2']"), $("[name='s3']"), $("[name='s4']"), $("[name='s5']"), $("[name='s6']"), $("[name='s7']"), $("[name='s8']"), $("[name='s9']"), $("[name='s10']"), $("[name='s11']"), $("[name='s12']"), $("[name='s13']"), $("[name='s14']"), $("[name='s15']"), $("[name='s16']")]
 
-];
+  // Rätta svaren
+  var answers = [$("#s1_1"), $("#s2_3"), $("#s3_1"),  $("#s4_3"), $("#s5_1"), $("#s6_1"), $("#s7_1"), $("#s8_2"),  $("#s9_2"), $("#s10_1"), $("#s11_1"), $("#s12_3"), $("#s13_1"), $("#s14_1"), $("#s15_1"), $("#s16_2")]
 
+  // Nuvarande fråga
+  var current_question = 0
 
-$("document").ready(function () {
-	var quizBox = $("#quiz");
-	var questionBox = $("#question");
-	var answers = $("#answers");
+  // När man klickar på nästa fråga
+  next_question_btn.click(function(){
+    // 1. Kolla om svaret är rätt
+    if(check_answer() === false) {
+      return
+    }
+    // 2. Göm nuvarande fråga
+    hide_current()
+    // 3. Visa nästa fråga
+    show_next()
+    // 4. Öka nuvarande fråga-räknaren med 1
+    increase_question_counter()
+    // 5. Om sista, visa resultat
+    if(last_question()) {
+      return render_result()
+    }
+  })
 
-	// Nuvarande fråga
-	var currentQuestion = 0;
+  function last_question() {
+    if(current_question >= q.length) {
+    return true
+    } else {
+    return false
+    }
+  }
 
-	// Svar på frågor som användaren angivit
-	var userAnswers = [];
+  function render_result() {
+    next_question_btn.fadeOut()
+    result_container.hide().removeClass("hidden").fadeIn()
+  }
 
-	loadQuestion(currentQuestion);
+  function check_answer() {
+    if(answers[current_question].is(":checked")) {
+      current_result = current_result + 1
+      result.html(current_result)
+      return true
+    }
+    var result_given = false
+    s[current_question].each(function(){
+      if($(this).is(":checked")){
+        result_given = true
+      }
+    })
+    return result_given
+  }
 
-	// Läs in en fråga
-	function loadQuestion (index) {
+  function hide_current() {
+    q[current_question].fadeOut().addClass("hidden")
+  }
 
-		// Om de finns mågon fråga att läsa in
-		if (index < questions.length) {
+  function show_next() {
+    if(current_question + 1 < q.length) {
+      q[current_question + 1].hide().removeClass("hidden").fadeIn()
+    }
+  }
 
-			// Ändrar frågetexten
-			questionBox.html(questions[index].question);
+  function increase_question_counter() {
+    current_question = current_question + 1
+  }
 
-			// Html som ska sättas in i som svarsalternativ
-			var ansHtml = "";
-
-			// Skapar an knapp för varje svarsalternativ i ansHtml texten
-			for (var i = 0; questions[index].answers.length > i ; i++) {
-				ansHtml += '<button class="ansBtn" data-i="' + i + '">' + questions[index].answers[i] + '</button>';
-			}
-
-			// Sätter in knapparna på sidan
-			answers.html(ansHtml);
-
-			checkInput(index);
-		} else {
-
-			// Visa resultat
-			showResults();
-		}
-	}
-
-	// Registrera knapptryckningar
-	function checkInput (index) {
-
-		// Lysna på alla svarsknappar
-		$(".ansBtn").click(function () {
-			var _this = $(this);
-
-			// Lägg till svaret i userAnswers
-			userAnswers.push(_this.data("i"));
-
-			// Läs in nästa fråga och öka currentQuestion
-			loadQuestion(++currentQuestion);
-		});
-	}
-
-	// Visa resultat
-	function showResults () {
-
-		// Ändra frågetiteln
-		questionBox.html("Results");
-
-		// Html som ska sättas in i som resultat
-		var resHtml = "";
-		for (var i = 0; i < questions.length; i++) {
-
-			// Om svaret är rätt
-			if (questions[i].correct == userAnswers[i]) {
-				resHtml += '<p class="correct">' + questions[i].answers[userAnswers[i]] + '</p>';
-			} else {
-				// Om svaret inte är rätt
-				resHtml += '<p class="incorrect">' + questions[i].answers[questions[i].correct] + ' var rätt svar. Du klickade på ' + questions[i].answers[userAnswers[i]] + '</p>';
-			}
-		}
-
-		// Lägg till resHtml på sidan
-		answers.html(resHtml);
-	}
-
-//
-
-});
+})
