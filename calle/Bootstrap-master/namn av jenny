@@ -1,0 +1,103 @@
+var names = [
+   {
+     name: "dani",
+     sex: "male",
+     animal: "fisk",
+     color: ""
+   },
+   {
+     name: "teddy",
+     sex: "male",
+     animal: "fisk",
+     color: "black"
+   },
+   {
+     name: "oliver",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "mio",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "amadeo",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "charlie",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "sander",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "nathan",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "nemo",
+     sex: "male",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "bubblis",
+     sex: "female",
+     animal: "fisk",
+     color: "fjäll"
+   },
+   {
+     name: "bruno",
+     sex: "male",
+     animal: "katt",
+     color: "brown"
+   },
+   {
+    name: "abbe",
+    sex: "male",
+    animal: "hund",
+    color: "black"
+  },
+  {
+    name: "brunis",
+    sex: "male",
+    animal: "gnagare",
+    color: "brown"
+  },
+  {
+    name: "bubba",
+    sex: "male",
+    animal: "katt",
+    color: "vit"
+  },
+  
+
+
+
+
+]
+
+
+
+var targets = ["male, dog, black"]
+var matches = [];
+
+for (var i = 0; i < names.length; i++) {
+  if (names[i].sex == targetSex && names[i].animal == targetAnimal && names[i].color == tragetColor) {
+    matches.push(names[i].name)
+  }
+
+}

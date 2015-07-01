@@ -1,0 +1,51 @@
+.yellow {
+  background: yellow;
+  color: black;
+}
+
+.red {
+  background: red;
+  color: white;
+}
+
+.blue {
+  background: blue;
+  color: white;
+}
+
+.green {
+  background:green;
+  color: white;
+}
+
+.black {
+  background: black;
+  color: white;
+}
+
+.orange {
+  background: orange;
+  color: white;
+}
+
+.brown {
+  background: brown;
+  color: white;
+}
+
+.pink {
+  background:pink;
+  color:black;
+}
+
+#target {
+  width: 100%;
+  height: 100px;
+}
+
+.btn {
+  width: 100px;
+  height: 100px;
+  margin-top: 5px;
+  font-size: 20pt;
+}

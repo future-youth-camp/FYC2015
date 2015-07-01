@@ -1,0 +1,49 @@
+.btn{
+  color:
+}
+.my-jumbotron{
+}
+
+.btn-xxl {
+  font-size: 100pt;
+  width: 100%;
+  color : white;
+  margin-bottom: 40px;
+}
+body{
+  background-color: #4073D5
+}
+.i2{
+  width: 40%
+
+}
+
+.center {
+  text-align: center;
+  margin: 40px
+
+}
+#star{
+  text-align: left;
+  margin-left: 20px;
+  font-size: 50pt;
+}
+
+.small-padding {
+  margin: 20px
+}
+body {
+  /*background-image: url("http://images7.alphacoders.com/320/320986.jpg");*/
+  }
+
+.search-box {
+  max-width: 200px;
+  float: right;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+}

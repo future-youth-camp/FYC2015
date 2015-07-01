@@ -1,0 +1,132 @@
+var names = [
+   {
+     name: "krim",
+     sex: "male",
+     animal: "katt",
+     color: "vit"
+   },
+   {
+     name: "marshmallow",
+     sex: "female",
+     animal: "cat",
+     color: "vit"
+   },
+   {
+     name: "snöboll",
+     sex: "male",
+     animal: "katt",
+     color: "vit"
+   },
+   {
+     name: "freddy",
+     sex: "male",
+     animal: "katt",
+     color: "vit"
+   },
+    {
+      name: "nisse",
+      sex: "male",
+      animal: "katt",
+      color: "black"
+    },
+    {
+      name: "Jamican",
+      sex: "male",
+      animal: "katt",
+      color: "svart"
+    },
+    {
+      name: "Gustaf",
+      sex: "male",
+      animal: "katt",
+      color: "orange"
+    },
+    {
+      name: "Bertil",
+      sex: "male",
+      animal: "katt",
+      color: "orange"
+    },
+    {
+      name: "jack daniels",
+      sex: "male",
+      animal: "katt",
+      color: "orange"
+    },
+    {
+      name: "buster",
+      sex: "male",
+      animal: "katt",
+      color: "orange"
+    },
+    {
+      name: "flamman",
+      sex: "male",
+      animal: "katt",
+      color: "orange"
+    },
+    {
+      name: "bruno",
+      sex: "male",
+      animal: "katt",
+      color: "brun"
+    },
+    {
+      name: "abbe",
+      sex: "male",
+      animal: "katt",
+      color: "brun"
+    },
+    {
+      name: "brunis",
+      sex: "male",
+      animal: "katt",
+      color: "brun"
+    },
+    {
+      name: "bubba",
+      sex: "male",
+      animal: "katt",
+      color: "brun"
+    },
+    {
+      name: "frippe",
+      sex: "male",
+      animal: "katt",
+      color: "grå"
+    },
+    {
+      name: "buzzan",
+      sex: "male",
+      animal: "katt",
+      color: "grå"
+    },
+    {
+      name: "nasse",
+      sex: "male",
+      animal: "katt",
+      color: "grå"
+    },
+    {
+      name: "filbert",
+      sex: "male",
+      animal: "katt",
+      color: "grå"
+    },
+    {
+      name: "filbert",
+      sex: "male",
+      animal: "hund",
+      color: "grå"
+    },
+
+
+]
+var names = [
+var targets = ["male, dog, black"]
+var matches = [];
+
+for (var i = 0; i < names.length; i++) {
+  if (names[i].sex == targetSex && names[i].animal == targetAnimal && names[i].color == tragetColor) {
+    matches.push(names[i].name)
+  }

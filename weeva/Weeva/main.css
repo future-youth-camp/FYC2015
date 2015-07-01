@@ -1,0 +1,169 @@
+.container {
+  background: #FFFAF6;
+}
+
+p {
+  color: #210C04;
+  font-family: "Kotta One";
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  color:  #E3A9C9;
+  font-family: "Cambria";
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+  text-transform: capitalize;
+  text-shadow: 20px #000000;
+  text-align: center;
+}
+
+h2 {
+  font-size: 30px;
+  color:  #E3A9C9;
+  font-family: "Cambria";
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+  text-transform: capitalize;
+  text-shadow: 20px #000000;
+  text-align: center;
+}
+
+h3 {
+  font-size: 15px;
+  color:  #E3A9C9;
+  font-family: "Cambria";
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+  text-transform: capitalize;
+  text-shadow: 20px #000000;
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+
+.btn {
+  color: black;
+
+}
+
+body {
+  background: #FFFAF6;
+}
+
+.navbar {
+  background: #FFFAF6;
+  color: #210C04;
+  font-family: "Kotta One";
+  padding-top: 25px;
+}
+
+.button {
+  color: #ffffff;
+  width: 125px;
+  height: 100px;
+  background: #27BBF2;
+  font-family: "Times New Roman";
+  font-size: 40px;
+  opacity: 50%;
+  border: 0px solid;
+  border-color: #210C04;
+  border-radius: 10px;
+  box-shadow: 1px 1px 6px #666666;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button:hover {
+   border-top-color: #ffffff;
+   background: #FFFAF6;
+   color: #27BBF2;
+   text-decoration: none;
+   box-shadow: none;
+   }
+.button:active {
+   border-color: #ffffff;
+   border: 1px solid;
+   background: #27BBF2;
+   color: #ffffff;
+   }
+
+   .bold {
+     font-size: 50px;
+     font-family: "Luna";
+     color: #E3A9C9;
+   }
+
+.pink {
+  font-size: 30px;
+  font-family: "Luna";
+  color: #E3A9C9;
+}
+
+.piff{
+  font-size: 30px;
+  font-family: "Luna";
+  color: #E3A9C9;
+  padding-top: 5px;
+  text-align: center;
+}
+
+.puff {
+  padding-top: 5px;
+  font-size: 20px;
+  font-family: "Luna";
+  color: #E3A9C9;
+  text-align: center;
+}
+
+.dropdown {
+  font-family: "Kotta One";
+  padding-top: 50px;
+  color: #210C04;
+}
+
+.dropdown:hover {
+  font-family: "Kotta One";
+  padding-top: 50px;
+  color: #000000;
+}
+
+.brownie {
+  font-family: "Kotta One";
+  text-align: ;
+  color: #210C04;
+}
+
+.img {
+  align-items: center;
+}
+
+link{
+  color: #E3A9C9;
+}
+
+.spel {
+
+}
+
+h4{
+  font-family: "Kotta One";
+  text-align: center;
+  color: #210C04;
+}
+
+.correct {
+	color: #E3A9C9;
+	background: #FFFAF6;
+}
+
+.incorrect {
+	color: #210C04;
+	background: #FFFAF6;
+}

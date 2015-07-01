@@ -1,0 +1,24 @@
+
+
+#color-btn-navbar {
+
+  color: #73C5DD
+}
+
+.container {
+
+  text-align: center;
+
+}
+.button {
+
+  border-radius: 100%
+}
+
+.my-img-responsive {
+  width: 50%;
+  border: solid;
+  border-radius: 100%;
+  border-color: black;
+
+}

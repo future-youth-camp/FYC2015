@@ -1,0 +1,72 @@
+var names = [
+   {
+     name: "Lizzie",
+     sex: "male",
+     animal: "kräldjur",
+     color: "black"
+   }
+
+   {
+     name: "Kobe",
+     sex: "male",
+     animal: "gnagare",
+     color: "black"
+   }
+
+   {
+     name: "Koby",
+     sex: "male",
+     animal: "gnagare",
+     color: "black"
+   }
+    {
+      name: "zelda",
+      sex: "female",
+      animal: "kräldjur",
+      color: "krälfärg"
+    }
+    name: "curry",
+    sex: "male",
+    animal: "gnagare",
+    color: "gul"
+    }
+    {
+    name: "Godzilla",
+    sex: "male",
+    animal: "gnagare",
+    color: "grå"
+  }
+
+  {
+  name: "Lillgerda",
+  sex: "female",
+  animal: "gnagare",
+  color: "kräldjur"
+
+name: "rubin",
+sex: "male",
+animal: "gnagare",
+color: "kräldjur"
+}
+
+name: "floyd",
+sex: "male",
+animal: "gnagare",
+color: "kräldjur"
+}
+
+name: "",
+sex: "",
+animal: "gnagare",
+color: ""
+}
+]
+var targets = ["male, dog, black"]
+var matches = [];
+
+for (var i = 0; i < names.length; i++) {
+  if (names[i].sex == targetSex && names[i].animal == targetAnimal && names[i].color == tragetColor) {
+    matches.push(names[i].name)
+  }
+
+}
