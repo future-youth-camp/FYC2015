@@ -8,14 +8,18 @@
 
 .container {
   margin-top: 100px;
-  background: #ffffff;
+  color: purple;
+  background: white;
+  max-width: 100%;
+  border-radius: 30px;
+
 }
 
 .playbtn {
   margin-top: 100px;
   font-weight: bold;
   font-size: 100pt;
-  background: #333333;
+  background: purple;
   border: 1px solid #ffffff;
   border-radius: 25px;
   color: #ffffff;
@@ -29,4 +33,9 @@
 .sidebar-nav-btn a {
   font-size: 20pt;
   color: white;
+}
+
+.sidebar-nav {
+  background: black;
+  border-radius: 0 0 200px 0;
 }

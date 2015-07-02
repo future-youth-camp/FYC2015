@@ -4,7 +4,7 @@ $(document).ready(function() {
     var gameover = false;
 
     //Time length
-    var timeLength = 3000;
+    var timeLength = 2000;
 
     var colors = ["red", "blue", "yellow", "green", "black", "orange", "white", "pink"]; // alla färger
 
@@ -13,6 +13,11 @@ $(document).ready(function() {
     var timer = setTimeout(function() {
         updateColor();
     }, timeLength);
+
+    var victoryTimer = setTimeout(function() {
+        alert("You won! Your score is: " + score);
+        window.location.href = "../La Mona/root/public/index.html";
+    }, 153000);
 
     var score = 10;
 
@@ -91,6 +96,8 @@ $(document).ready(function() {
     }
 
     function gameOver() {
+        window.clearTimeout(victoryTimer);
+
         gameover = true;
 
         window.clearTimeout(timer);
