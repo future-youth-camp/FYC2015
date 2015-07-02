@@ -2,20 +2,57 @@
 text-align: center;
 align-content: center;
 }
-.body {
+body {
   background: purple;
 }
 
 .btn {
-  margin: 10px;
-  margin-top: 20px;
-width: 100%;
-height: 50px;
+  margin: 30px;
+  margin-top: 10px;
+width: 80%;
+height: 70px;
 }
 
-.Main2 {
-  border-style: solid;
- border-width: 5px;
+.background-img {
+  min-width: 100%;
+  min-height: 100%;
+
+  width: auto;
+  height: auto;
+
+  position: fixed;
+  z-index: -100;
+  top: 0;
+  border: 1px solid black;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.3);
   text-align: center;
-  align-content: center;
+}
+
+.play-btn {
+  font-size: 15pt;
+  background: purple;
+  width: 100%;
+  max-width: 250px;
+  margin: auto;
+}
+
+.main-text {
+  text-align: left;
+}
+
+#btnn {
+  width: 30%;
+  height: 70px;
+}
+
+h1, h3 {
+  color: white;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }

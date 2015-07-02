@@ -43,7 +43,7 @@ $(document).ready(function() {
 
 
     function show_result() {
-        $(".resultat").html("Ditt resultat blev: " + points + " av 15");
+        $(".resultat").html("Ditt resultat blev: " + points + " av 15 möjliga");
         $(".resultat").slideDown();
         hide_current();
     }
