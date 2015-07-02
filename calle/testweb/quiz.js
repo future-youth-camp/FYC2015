@@ -65,7 +65,7 @@ var names = [
     key: ["Hona", "Hane", "Brun", "Orange", "Hund"]
   },
   {
-    name: "Glenn",
+    name: "Glenn P Karlsson",
     key: ["Katt", "Grå", "Medium", "Hane", "Stor"]
   },
   {
@@ -118,8 +118,12 @@ var names = [
     key: ["Brun", "Stor", "Liten", "Hund", "Katt", "Liten"]
   },
   {
-    name: "",
-    key: ["", "", ""]
+    name: "Röda Traktorn Rolf",
+    key: ["Orange", "Katt", "Hane", "Stor", "Bra"]
+  },
+  {
+    name: "Laser Lennart",
+    key: ["Orange", "Katt", "Bra", "Hane"]
   }
 ]
 
@@ -180,9 +184,7 @@ $(document).ready(function(){
     console.log("Rendering");
     for (var i = 0; i < names.length; i++) {
       count = 0;
-
-
-        printNames(i);
+      printNames(i);
 
       console.log(count);
     }

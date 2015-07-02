@@ -6,6 +6,7 @@ p {
   color: #210C04;
   font-family: "Kotta One";
   font-size: 20px;
+  text-transform: none;
 }
 
 h1 {
@@ -183,8 +184,8 @@ h4{
 
 #result{
   font-family: "Kotta One";
-  font-size: 18px;
-  color: #210C04;
+  font-size: 25px;
+  color: #E3A9C9;
 }
 
 #result_container {
@@ -211,5 +212,26 @@ legend{
 
 .link {
   font-family: "Kotta One";
+  color: #E3A9C9;
+}
+
+.do{
+  font-family: "Kotta One";
+  font-size: 20px;
+  color: #210C04;
+  text-transform: none;
+}
+
+.ha {
+  text-decoration: underline;
+  font-family: "Kotta One";
+  color: #210C04;
+  text-transform: none;
+  font-size: 21px;
+}
+
+.att {
+  font-family: "Kotta One";
+  font-size: 25px;
   color: #E3A9C9;
 }
