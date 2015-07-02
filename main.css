@@ -127,6 +127,11 @@ body {
 		background: black;
 }
 
+img #weeva-img {
+	max-height: auto;
+	height: auto;
+}
+
 .team-tile .bottom {
 	position: absolute;
 	width: 100%;
