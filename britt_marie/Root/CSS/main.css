@@ -32,9 +32,6 @@ body{
 .small-padding {
   margin: 20px
 }
-body {
-  /*background-image: url("http://buzzerg.com/wp-content/uploads/8589130494239-black-tiger-wallpaper-hd.jpg");*/
-  }
 
 .search-box {
   max-width: 200px;
@@ -43,7 +40,7 @@ body {
 
 .bg {
   position: fixed;
-  top: 0;
+  bottom: 0;
   right: 0;
   min-width: 100%;
   min-height: 100%;

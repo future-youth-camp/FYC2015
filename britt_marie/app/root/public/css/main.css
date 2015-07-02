@@ -95,10 +95,12 @@
 }
 
 body {
-	background:#3632FF;
+	/*background:#;*/
   margin: 0;
   padding: 0;
   width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .hidden {
@@ -107,21 +109,22 @@ body {
   display: none;
 }
 
-/*.container {
-  margin: 0;
-}*/
 
 #nextcard textarea {
   max-width: 100vw;
   height: 100px
 }
-/*.imgs{
-  width: 150px;
-  height: 100px;
-  text-align: center;
+
+.bg{
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden;
 }
 
-.img-parent {
-  text-align: center;
-  margin: 0;
-}*/
+.container {
+  width: 100%;
+  overflow-x: hidden;
+}
