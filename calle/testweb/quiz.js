@@ -138,13 +138,13 @@ $(document).ready(function(){
   var result_container = $("#result_container")
 
   // Frågorna
-  var q = [$("#q1"), $("#q2"), $("#q3"), $("#q4"), $("#q5"), $("#q6"), $("#q7")]
+  var q = [$("#q1"), $("#q8"), $("#q2"), $("#q3"), $("#q4"), $("#q5"), $("#q6"), $("#q7")]
 
   // Svarsalternativen
-  var s = [$("[name='s1']"), $("[name='s2']"), $("[name='s3']"), $("[name='s4']"), $("[name='s5']"), $("[name='s6']"), $("[name='s7']")]
+  var s = [$("[name='s1']"), $("[name='s8']"), $("[name='s2']"), $("[name='s3']"), $("[name='s4']"), $("[name='s5']"), $("[name='s6']"), $("[name='s7']")]
 
   // Rätta svaren
-  var answers = ["#s1_4", "#s2_2", "#s3_1", "#s4_3", "#s5_3", "#s6_3", "#s7_3"]
+  var answers = ["#s1_4", "#s8_2", "#s2_2", "#s3_1", "#s4_3", "#s5_3", "#s6_3", "#s7_3"]
 
   // Nuvarande fråga
   var current_question = 0

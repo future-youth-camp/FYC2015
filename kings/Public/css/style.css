@@ -44,7 +44,7 @@ height: 60px;
 }
 
 #btnn {
-  width: 30%;
+  width: 50%;
   height: 70px;
 }
 
@@ -55,4 +55,12 @@ h1, h3, h2 {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.sk {
+  display: inline-block;
+}
+
+.barn {
+  text-align:center;
 }

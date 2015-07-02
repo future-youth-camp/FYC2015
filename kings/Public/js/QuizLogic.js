@@ -22,6 +22,8 @@ $(document).ready(function() {
     $(".f14").hide();
     $(".f15").hide();
     $(".resultat").hide();
+    $(".bb").hide()
+    $(".sk").hide()
 
 
     $(".btn").on("click", function() {
@@ -44,7 +46,43 @@ $(document).ready(function() {
 
     function show_result() {
         $(".resultat").html("Ditt resultat blev: " + points + " av 15 möjliga");
+        $(".sk").slideDown()
         $(".resultat").slideDown();
+        if (points >= 15) {
+            $(".bb").html("Du är en äkta belieber! <3");
+            $(".sk").slideDown()
+            $(".bb").slideDown()
+        }
+        else if (points >= 12) {
+          $(".bb").html("Du är snart där, det är bara att öva lite mer!");
+          $(".sk").slideDown()
+          $(".bb").slideDown()
+        }
+        else if (points >= 9) {
+          $(".bb").html("Du är påväg men inte riktigt där än!");
+          $(".sk").slideDown()
+          $(".bb").slideDown()
+        }
+        else if (points >= 5) {
+          $(".bb").html("Inte äns nära försök igen");
+          $(".sk").slideDown()
+          $(".bb").slideDown()
+        }
+        else if (points >= 2) {
+          $(".bb").html("Nu har du bara tur...");
+          $(".sk").slideDown()
+          $(".bb").slideDown()
+        }
+        else if (points < 1) {
+          $(".bb").html("Du är inte en belieber");
+          $(".sk").hide()
+          $(".bb").slideDown()
+        }
+        else if (points < 10) {
+          $(".bb").html("Du är så långt ifrån att vara en belieber");
+          $(".sk").hide()
+          $(".bb").slideDown()
+        }
         hide_current();
     }
 

@@ -60,7 +60,7 @@ body {
 }
 
 .social {
-	margin-top: -30px;
+	margin-top: -10px;
 }
 
 .social a {
@@ -74,7 +74,7 @@ body {
 }
 
 .small-heading {
-	margin-top: 50px;
+	margin-top: 10px;
 	color: white;
 	font-size: 18pt;
 	letter-spacing: 1px;
@@ -118,18 +118,23 @@ body {
     top: -100%;
     bottom: -100%;
     margin: auto;
-    min-height: 100%;
     min-width: 100%;
     
     width: 250px;
-		height: auto;
 		
-		background: black;
+		/*background: black;*/
 }
 
-img #weeva-img {
-	max-height: auto;
-	height: auto;
+.weeva-tile {
+	background: #fff9f9;
+}
+
+.weeva-img {
+	
+}
+
+.calle-img {
+	height: 100%;
 }
 
 .team-tile .bottom {
