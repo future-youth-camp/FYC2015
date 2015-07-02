@@ -4,7 +4,7 @@ $(document).ready(function() {
         $(".f1"), $(".f2"), $(".f3"), $(".f4"), $(".f5"), $(".f6"), $(".f7"), $(".f8"), $(".f9"), $(".f10"), $(".f11"), $(".f12"), $(".f13"),
         $(".f14"), $(".f15")
     ];
-    var a = ["f1btn", "f2btn2", "f3btn3", "f4btn2", "f5btn", "f6btn4", "f7btn", "f8btn2", "f9btn", "f10btn3", "f11btn2", "f12btn2", "f13btn", "f14btn", "f15btn3"];
+    var a = ["f1btn", "f2btn2", "f3btn3", "f4btn2", "f5btn", "f6btn4", "f7btn", "f8btn2", "f9btn", "f10btn3", "f11btn2", "f12btn", "f13btn", "f14btn", "f15btn3"];
     var points = 0;
     var currentQuestion = 0;
     $(".f2").hide();

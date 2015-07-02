@@ -10,7 +10,7 @@ body {
   margin: 30px;
   margin-top: 10px;
 width: 80%;
-height: 70px;
+height: 60px;
 }
 
 .background-img {
@@ -48,7 +48,7 @@ height: 70px;
   height: 70px;
 }
 
-h1, h3 {
+h1, h3, h2 {
   color: white;
   text-shadow:
     -1px -1px 0 #000,
