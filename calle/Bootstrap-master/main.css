@@ -6,7 +6,7 @@
 }
 
 .container {
-  /*background: white;*/
+  background: lightblue;
   text-align: center;
 
 }
@@ -49,4 +49,9 @@
   .img {
     display: none;
   }
+}
+#body {
+
+  background-color: #000/*lightblue*/;
+
 }

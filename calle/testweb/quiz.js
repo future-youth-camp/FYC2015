@@ -1,11 +1,11 @@
 var names = [
   {
     name: "Calle",
-    key: ["Hund", "Hane", "Medium"]
+    key: ["Hund", "Hane", "Medium", "Brun", "Orange", "Vit", "Grå", "Obfärg"]
   },
   {
     name: "Missan",
-    key: ["Katt", "Hona", "Obfärg","Liten"]
+    key: ["Katt", "Hona", "Obfärg","Liten", "Brun", "Orange", "Vit", "Grå"]
   },
   {
     name: "Snöboll",
@@ -18,11 +18,11 @@ var names = [
 
   {
     name: "Elisia",
-    key: ["Fågel", "Grön", "Hane", "Hona", "Vinte"]
+    key: ["Fågel", "Obfärg", "Hona", "Vinte", "Orange", "Vit"]
   },
   {
     name: "Gustaf",
-    key: ["Katt", "Orange", "Stor", "Hane"]
+    key: ["Katt", "Orange", "Stor", "Hane", "Medium", "Liten", "Gustaf"]
   },
   {
     name: "Frappe",
@@ -34,19 +34,19 @@ var names = [
   },
   {
     name: "Marshmellow",
-    key: ["Fågel", "Katt", "Hund", "Stor", "Vit", "Hane", "Hona", "Vinte"]
+    key: ["Fågel", "Katt", "Hund", "Stor", "Vit", "Hane", "Hona", "Vinte", "Mar"]
   },
   {
     name: "Dani",
-    key: ["Fisk", "Hane", "Stor", "Liten", "Medium", "Vit"]
+    key: ["Fisk", "Hane", "Stor", "Liten", "Medium", "Vit", "Brun"]
   },
   {
     name: "Krim",
-    key: ["Katt", "Stor", "Medium", "Vit", "Hane"]
+    key: ["Katt", "Stor", "Medium", "Vit", "Hane", "Grå", "Obfärg"]
   },
   {
     name: "Bruno",
-    key: ["Brun", "Stor", "Medium", "Hane"]
+    key: ["Brun", "Stor", "Medium", "Hane", "Hund", "Fisk", "Fågel"]
   },
   {
     name: "Sam",
@@ -58,7 +58,7 @@ var names = [
   },
   {
     name: "Quinn",
-    key: ["Hona", "Hane", "Obfärg", "Vinte", "Vit", "Grå", "Medium", "Stor", "Liten"]
+    key: ["Hona", "Hane", "Obfärg", "Vinte", "Vit", "Grå", "Medium", "Stor", "Liten", "Brun"]
   },
   {
     name: "Sandy",
@@ -69,14 +69,58 @@ var names = [
     key: ["Katt", "Grå", "Medium", "Hane", "Stor"]
   },
   {
-    name: "",
-    key: ["", "", ""]
+    name: "Stew",
+    key: ["Orange", "Hund", "Katt", "Vit", "Grå", "Hane", "Brun", "Obfärg"]
+  },
+  {
+    name: "Sluggo",
+    key: ["Fisk", "Hane", "Hona", "Vinte", "Orange", "Vit", "Grå","Obfärg", "Brun"]
+  },
+  {
+    name: "Sixten",
+    key: ["Fisk", "Katt", "Hane", "Obfärg", "Orange", "Vit", "Grå", "Brun"]
+  },
+  {
+    name: "Godzila",
+    key: ["Fisk", "Stor", "Liten", "Obfärg", "Hane", "Hona"]
+  },
+  {
+    name: "Doge",
+    key: ["Hund", "Toot", "Obfärg", "Vinte"]
+  },
+  {
+    name: "Kiwi",
+    key: ["Fågel", "Obfärg", "Hane", "Hona", "Liten", "Medium", "Brun"]
+  },
+  {
+    name: "Mango",
+    key: ["Fågel", "Orange", "Liten", "Stor", "Medium", "Hane", "Hona"]
+  },
+  {
+    name: "Tweety",
+    key: ["Fågel", "Orange", "Obfärg", "Hona", "Liten"]
+  },
+  {
+    name: "Nemo",
+    key: ["Fisk", "Orange", "Hane", "Liten", "Medium"]
+  },
+
+  {
+    name: "Fenan",
+    key: ["Fisk", "Hane", "Hona"]
+  },
+  {
+    name: "Doris",
+    key: ["Fisk", "Obfärg", "Hona"]
+  },
+  {
+    name: "Björne",
+    key: ["Brun", "Stor", "Liten", "Hund", "Katt", "Liten"]
   },
   {
     name: "",
     key: ["", "", ""]
-  },
-
+  }
 ]
 
 var count = 0;
@@ -139,16 +183,7 @@ $(document).ready(function(){
 
 
         printNames(i);
-      /*  for (var k = 0; k < names[i].key.length; k++) {
-          console.log(names[i].key[k]);
-          if (targets[j].toLowerCase() == names[i].key[k].toLowerCase()) {
-            count++;
-            console.log(names[i].name);
-            if (count > 1){
-              matches.push(names[i].name);
-            }
-          }
-        } */
+
       console.log(count);
     }
 
@@ -177,7 +212,13 @@ $(document).ready(function(){
       html += '<li class="match">' + matches[i] + '</li>'
     }
 
+    html += '<button class="btn btn-primary" id="restartBtn">Starta om!</button>'
+
     resCont.html(html);
+
+    $("#restartBtn").click(function () {
+      window.location.reload();
+    })
   }
 
   function check_answer() {

@@ -50,3 +50,8 @@
     display: none;
   }
 }
+
+.match {
+  list-style: none;
+  font-size: 14pt;
+}
