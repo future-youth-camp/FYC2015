@@ -1,6 +1,11 @@
 
 $(document).ready(function() {
 
+
+    $(".restartbtn").click(function  () {
+        location.reload();
+    });
+
     var gameover = false;
 
     //Time length

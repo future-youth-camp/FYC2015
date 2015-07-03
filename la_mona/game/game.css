@@ -117,3 +117,8 @@ body {
 
     z-index: -999;
 }
+
+.restartbtn {
+    color: white;
+    text-decoration: none;
+}

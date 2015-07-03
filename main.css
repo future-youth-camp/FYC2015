@@ -140,6 +140,10 @@ body {
 	height: 100%;
 }
 
+.kings-logo {
+	padding-bottom: 50px;
+}
+
 .team-tile .bottom {
 	position: absolute;
 	width: 100%;
