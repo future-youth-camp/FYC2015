@@ -194,7 +194,7 @@ $(document).ready(function(){
         for (var k = 0; k < names[i].key.length; k++) {
           if (targets[j].toLowerCase() == names[i].key[k].toLowerCase()) {
             count++;
-            if (count > 1){
+            if (count > 2){
               matches.push(names[i].name);
               return;
             }

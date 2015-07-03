@@ -60,17 +60,17 @@ $(document).ready(function() {
         }
         else if (points >= 9) {
           $(".bb").html("Du är påväg men inte riktigt där än!");
-          $(".sk").slideDown()
+          $(".sk").hide()
           $(".bb").slideDown()
         }
         else if (points >= 5) {
           $(".bb").html("Inte äns nära försök igen");
-          $(".sk").slideDown()
+          $(".sk").hide()
           $(".bb").slideDown()
         }
         else if (points >= 2) {
           $(".bb").html("Nu har du bara tur...");
-          $(".sk").slideDown()
+          $(".sk").hide()
           $(".bb").slideDown()
         }
         else if (points < 1) {
